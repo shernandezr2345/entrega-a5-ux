@@ -3,4 +3,5 @@
     <string name="app_titulo">RUNNING</string>
     <string name="app_subtitulo">Correr no se explica, correr se siente</string>
     <string name="app_btn_empecemos">Empecemos</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
