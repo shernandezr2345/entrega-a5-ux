@@ -4,4 +4,9 @@
     <string name="app_subtitulo">Correr no se explica, correr se siente</string>
     <string name="app_btn_empecemos">Empecemos</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="label_usuario">Usuario</string>
+    <string name="label_contraseña">Contraseña</string>
+    <string name="label_olvido">¿Olvidó su contraseña?</string>
+    <string name="label_iniciar">Iniciar Sesión</string>
 </resources>
+
