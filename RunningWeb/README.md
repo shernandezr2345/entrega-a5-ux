@@ -119,7 +119,14 @@ Eduard Bernal - e.bernalo@uniandes.edu.co
 
 Pantalldas desarrolladas: 1. Listado de alertas
                           2. Creación de alertas
-                          3. Perfil  
+                          3. Perfil
+
+Steven Hernandez Rios - s.hernandezr2345@uniandes.edu.co 
+
+Pantalldas desarrolladas: 1. Crear meta
+                          2. Meta sugerida
+                          3. Meta
+
 ---
 
 **RunningWeb** - Tu compañero digital para alcanzar tus metas de running 🏃‍♂️💪
