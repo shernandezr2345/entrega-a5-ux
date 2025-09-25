@@ -79,53 +79,38 @@
 }
 
 .meta-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 95px;
+  height: 95px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #624E88;
 }
 
 .objetivo-icon {
-  background: #8967B3;
+  background: transparent;
 }
 
 .periodo-icon {
-  background: #8967B3;
+  background: transparent;
 }
 
 .tipo-icon {
-  background: #8967B3;
+  background: transparent;
 }
 
 .alarma-icon {
-  background: #8967B3;
+  background: transparent;
 }
 
 .meta-info-value {
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 600;
   color: #000000;
   text-align: center;
 }
 
-.badge-b {
-  position: absolute;
-  top: -5px;
-  right: -15px;
-  width: 24px;
-  height: 24px;
-  background: #624E88;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-}
+
 
 /* Cards Section */
 .cards-section {
@@ -178,7 +163,7 @@
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 /* Extended FAB Button - usando estilos del componente crear-meta */
