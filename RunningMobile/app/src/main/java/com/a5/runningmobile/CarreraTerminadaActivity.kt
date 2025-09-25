@@ -2,24 +2,23 @@ package com.a5.runningmobile
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class CarreraActivity : AppCompatActivity() {
+class CarreraTerminadaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_carrera)
+        setContentView(R.layout.activity_carrera_terminada)
 
-        val btnStartRace: Button = findViewById(R.id.btnStartRace)
 
-        btnStartRace.setOnClickListener {
-            val intent = Intent(this, CarreraEnCursoActivity::class.java)
-            startActivity(intent)
+        val btnBack: ImageButton = findViewById(R.id.btnBack0)
+        btnBack.setOnClickListener {
+            finish()
         }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
@@ -37,5 +36,6 @@ class CarreraActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
     }
 }

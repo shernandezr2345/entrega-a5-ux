@@ -7,18 +7,24 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.ImageButton
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class CarreraActivity : AppCompatActivity() {
+class CarreraEnCursoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_carrera)
+        setContentView(R.layout.activity_carrera_en_curso)
 
-        val btnStartRace: Button = findViewById(R.id.btnStartRace)
+        val btnBack: ImageButton = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish()
+        }
 
-        btnStartRace.setOnClickListener {
-            val intent = Intent(this, CarreraEnCursoActivity::class.java)
+
+        val btnfinalizar: Button = findViewById(R.id.finalizar)
+        btnfinalizar.setOnClickListener {
+            val intent = Intent(this, CarreraTerminadaActivity::class.java)
             startActivity(intent)
         }
 
