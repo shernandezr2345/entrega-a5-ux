@@ -92,4 +92,19 @@ Pantalldas desarrolladas:
 - **Carrera terminada** → Resumen final. 
 ---
 
+Steven Hernandez Rios - s.hernandezr2345@uniandes.edu.co 
 
+Pantallas desarroladas:
+
+- **Login** → Pantalla inicial de ingreso.  
+- **Bienvenida** → Pantalla introductoria.  
+- **Carrera** → Configuración de la carrera (modo caminando, cicla, otro).
+
+---
+
+
+## APK
+
+Se genera el APK de la aplciación y se puede descargar en el siguiente link: 
+
+https://uniandes-my.sharepoint.com/:f:/g/personal/s_hernandezr2345_uniandes_edu_co/Eo0yjrO9LcVOi81ENcGfuSQBMLSYEweW6qAFns_7ksMaAw?e=P84oYf
