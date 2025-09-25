@@ -79,11 +79,17 @@ app/
 
 - **Login** → Pantalla inicial de ingreso.  
 - **Bienvenida** → Pantalla introductoria.  
-- **Carrera** → Configuración de la carrera (modo caminando, cicla, otro).  
-- **Carrera en curso** → Visualización de métricas (tiempo, ritmo, duración) y un mapa.  
-- **Carrera terminada** → Resumen final.  
+ 
 - **Navegación inferior** → Menú con Inicio, Carreras, Alertas y Perfil.  
 
+
+Eduard Bernal - e.bernalo@uniandes.edu.co 
+
+Pantalldas desarrolladas:
+
+- **Carrera** → Configuración de la carrera (modo caminando, cicla, otro).  
+- **Carrera en curso** → Visualización de métricas (tiempo, ritmo, duración) y un mapa.  
+- **Carrera terminada** → Resumen final. 
 ---
 
 
