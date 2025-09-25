@@ -26,6 +26,9 @@ src/app/
 │   ├── alertas/          # Gestión de alertas
 │   ├── perfil/           # Perfil de usuario
 │   ├── navegacion/       # Componentes de navegación
+│   ├── crear-meta/       # Creación de una meta
+│   ├── meta-sugerida/    # Meta sugerida
+│   ├── metas/             # Ver Meta
 │   └── compartido/       # Componentes reutilizables
 ├── tokens.scss           # Design tokens y variables
 └── styles.css           # Estilos globales
