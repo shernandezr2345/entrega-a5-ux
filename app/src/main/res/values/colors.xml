@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta de Colores -->
+    <color name="color_beige">#E6D9A2</color>
+    <color name="color_pink">#CB80AB</color>
+    <color name="color_purple_light">#8967B3</color>
+    <color name="color_primary_purple_dark">#624E88</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
