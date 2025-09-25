@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Runningmobile</string>
+    <string name="app_titulo">RUNNING</string>
+    <string name="app_subtitulo">Correr no se explica, correr se siente</string>
+    <string name="app_btn_empecemos">Empecemos</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="label_usuario">Usuario</string>
+    <string name="label_contraseña">Contraseña</string>
+    <string name="label_olvido">¿Olvidó su contraseña?</string>
+    <string name="label_iniciar">Iniciar Sesión</string>
+    <string name="label_carrera_en_curso">Carrera En Curso</string>
+    <string name="label_seguimiento">Seguimiento en vivo</string>
+    <string name="label_titulo_carrera">Carrera #1</string>
+    <string name="label_carrera_terminada">Carrera Finalizada</string>
+    <string name="label_felicitaciones">!Felicitaciones Liliana¡</string>
+    <string name="back_button">Volver</string>
+    <string name="label_bienvenido">Bienvenido</string>
+    <string name="label_subtitulo_carrera">Correr no se explica, correr se siente</string>
+
+
+</resources>
+
