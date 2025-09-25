@@ -1,0 +1,339 @@
+@import "../../tokens.scss";
+
+.perfil-container {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: $font-family-base;
+}
+
+.navigation-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main-content {
+  margin-left: 84px;
+  padding: 32px;
+  width: calc(100% - 84px);
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: $font-size-titulo-principal;
+  font-weight: $font-weight-titulo-principal;
+  font-family: $font-family-base;
+  color: #000000;
+  margin: 0;
+  line-height: $line-height-titulo-principal;
+}
+
+/* Form Card usando grid layout de 2 columnas */
+.form-card {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #ffffff;
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 32px;
+  min-height: 600px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 40px;
+  height: 100%;
+  align-items: start;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: $font-family-base;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-number {
+  background: #CB80AB;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.form-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item.half-width {
+  flex: 0.5;
+}
+
+.field-label {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input containers con anchos fijos */
+.input-container {
+  background: white;
+  border: 1px solid #79747E;
+  border-radius: 4px;
+  height: 56px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.input-container.fixed-width {
+  width: 280px;
+}
+
+.input-container label {
+  color: #79747E;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: $font-family-base;
+  margin-bottom: 4px;
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: $font-family-base;
+  color: #333;
+  flex: 1;
+}
+
+.input-container input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Segmented buttons con anchos fijos */
+.segmented-button {
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #E0E0E0;
+  background: white;
+  height: 48px;
+}
+
+.segmented-button.fixed-width {
+  width: 280px;
+}
+
+.segmented-button button {
+  flex: 1;
+  border: none;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.segmented-button button:first-child {
+  border-right: 1px solid #E0E0E0;
+}
+
+.segmented-button button.selected {
+  background: #CB80AB;
+  color: white;
+}
+
+.segmented-button button:hover:not(.selected) {
+  background: #F5F5F5;
+}
+
+/* Segmented button triple para Nivel */
+.segmented-button-triple {
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #E0E0E0;
+  background: white;
+  height: 48px;
+}
+
+.segmented-button-triple.fixed-width-triple {
+  width: 280px;
+}
+
+.segmented-button-triple button {
+  flex: 1;
+  border: none;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.segmented-button-triple button:not(:last-child) {
+  border-right: 1px solid #E0E0E0;
+}
+
+.segmented-button-triple button.selected {
+  background: #CB80AB;
+  color: white;
+}
+
+.segmented-button-triple button:hover:not(.selected) {
+  background: #F5F5F5;
+}
+
+/* Guardar button */
+.form-actions {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+}
+
+.guardar-btn {
+  background: #CB80AB;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 123px;
+  height: 56px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(203, 128, 171, 0.3);
+}
+
+.guardar-btn:hover {
+  background: #B56B96;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(203, 128, 171, 0.4);
+}
+
+.checkmark {
+  font-size: 16px;
+}
+
+/* Separador vertical */
+.vertical-full-width {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: content-box;
+  overflow: hidden;
+  width: 1px;
+  height: 100%;
+  min-height: 600px;
+  flex: 0 0 1px;
+}
+
+.divider {
+  display: flex;
+  background: rgba(0, 0, 0, 0.1);
+  width: 1px;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .vertical-full-width {
+    display: none;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .input-container.fixed-width,
+  .segmented-button.fixed-width,
+  .segmented-button-triple.fixed-width-triple {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 599px) {
+  .navigation-rail {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+  
+  .form-card {
+    padding: 24px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+}
