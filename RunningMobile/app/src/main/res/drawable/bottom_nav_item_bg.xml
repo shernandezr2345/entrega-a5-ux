@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo del ítem activo (círculo solo para el icono) -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item
+                android:width="36dp"
+                android:height="36dp"
+                android:gravity="center">
+                <shape android:shape="oval">
+                    <solid android:color="@color/color_pink"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Fondo de ítems inactivos -->
+    <item>
+        <color android:color="@android:color/transparent"/>
+    </item>
+</selector>
