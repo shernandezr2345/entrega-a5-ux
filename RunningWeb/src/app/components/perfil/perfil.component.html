@@ -1,0 +1,180 @@
+<div class="perfil-container">
+  <!-- Navigation Rail -->
+  <app-navigation-rail
+    [showMenu]="false"
+    [showFab]="false"
+    [alignment]="'Top'"
+    [navItems]="'7'"
+    (navItemSelected)="onNavItemSelected($event)"
+    class="navigation-rail"
+  ></app-navigation-rail>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="page-title">Perfil</h1>
+    </div>
+
+    <!-- Form Card usando layout grid de 2 columnas -->
+    <div class="form-card">
+      <div class="form-grid">
+        <!-- Columna 1: Datos básicos -->
+        <div class="form-column">
+          <h2 class="section-title">
+            <span class="section-number">1</span>
+            Datos básicos
+          </h2>
+          
+          <!-- Fila 1: Input Nombre y Input Apellido lado a lado -->
+          <div class="form-row">
+            <div class="form-item">
+              <label class="field-label">Nombre</label>
+              <div class="input-container fixed-width">
+                <input type="text" [(ngModel)]="nombre" placeholder="Ingresa tu nombre">
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="field-label">Apellido</label>
+              <div class="input-container fixed-width">
+                <input type="text" [(ngModel)]="apellido" placeholder="Ingresa tu apellido">
+              </div>
+            </div>
+          </div>
+
+          <!-- Fila 2: Input Dirección y Input Correo lado a lado -->
+          <div class="form-row">
+            <div class="form-item">
+              <label class="field-label">Dirección</label>
+              <div class="input-container fixed-width">
+                <input type="text" [(ngModel)]="direccion" placeholder="Ingresa tu dirección">
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="field-label">Correo electrónico</label>
+              <div class="input-container fixed-width">
+                <input type="email" [(ngModel)]="correoElectronico" placeholder="ejemplo@correo.com">
+              </div>
+            </div>
+          </div>
+
+          <!-- Fila 3: Input Teléfono -->
+          <div class="form-row">
+            <div class="form-item half-width">
+              <label class="field-label">Teléfono</label>
+              <div class="input-container fixed-width">
+                <input type="tel" [(ngModel)]="telefono" placeholder="Ingresa tu teléfono">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Separador vertical -->
+        <div class="vertical-full-width">
+          <div class="divider"></div>
+        </div>
+
+        <!-- Columna 2: Datos deportivos -->
+        <div class="form-column">
+          <h2 class="section-title">
+            <span class="section-number">2</span>
+            Datos deportivos
+          </h2>
+          
+          <!-- Fila 1: Segmented Button Sexo y Input Marca personal lado a lado -->
+          <div class="form-row">
+            <div class="form-item">
+              <label class="field-label">Sexo</label>
+              <div class="segmented-button fixed-width">
+                <button 
+                  type="button"
+                  [class.selected]="sexo === 'Femenino'"
+                  (click)="sexo = 'Femenino'"
+                >
+                  Femenino
+                </button>
+                <button 
+                  type="button"
+                  [class.selected]="sexo === 'Masculino'"
+                  (click)="sexo = 'Masculino'"
+                >
+                  Masculino
+                </button>
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="field-label">Marca personal</label>
+              <div class="input-container fixed-width">
+                <input type="text" [(ngModel)]="marcaPersonal" placeholder="Ej: 42:15 (maratón)">
+              </div>
+            </div>
+          </div>
+
+          <!-- Fila 2: Input Estatura y Input Nombre entrenador lado a lado -->
+          <div class="form-row">
+            <div class="form-item">
+              <label class="field-label">Estatura</label>
+              <div class="input-container fixed-width">
+                <input type="text" [(ngModel)]="estatura" placeholder="Ej: 1.75 m">
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="field-label">Nombre entrenador</label>
+              <div class="input-container fixed-width">
+                <input type="text" [(ngModel)]="nombreEntrenador" placeholder="Nombre del entrenador">
+              </div>
+            </div>
+          </div>
+
+          <!-- Fila 3: Input Peso y Segmented Button Nivel lado a lado -->
+          <div class="form-row">
+            <div class="form-item">
+              <label class="field-label">Peso</label>
+              <div class="input-container fixed-width">
+                <input type="text" [(ngModel)]="peso" placeholder="Ej: 70 kg">
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="field-label">Nivel</label>
+              <div class="segmented-button-triple fixed-width-triple">
+                <button 
+                  type="button"
+                  [class.selected]="nivel === 'Novato'"
+                  (click)="nivel = 'Novato'"
+                >
+                  Novato
+                </button>
+                <button 
+                  type="button"
+                  [class.selected]="nivel === 'Intermedio'"
+                  (click)="nivel = 'Intermedio'"
+                >
+                  Intermedio
+                </button>
+                <button 
+                  type="button"
+                  [class.selected]="nivel === 'Avanzado'"
+                  (click)="nivel = 'Avanzado'"
+                >
+                  Avanzado
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guardar Button -->
+      <div class="form-actions">
+        <button 
+          type="button" 
+          class="guardar-btn"
+          (click)="onGuardar()"
+        >
+          <span class="checkmark">✓</span>
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

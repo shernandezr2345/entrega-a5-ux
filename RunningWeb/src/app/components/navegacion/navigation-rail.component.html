@@ -1,0 +1,46 @@
+<div class="navigation-rail_62297-12157">
+  <!-- Navigation Items (desde arriba) -->
+  <div class="segments_I62297-12157-58016-36922">
+    <button 
+      *ngFor="let item of navItemsList; let i = index"
+      class="nav-item"
+      [class.selected]="item.selected"
+      (click)="onNavItemClick(i)"
+      type="button"
+    >
+      <div class="nav-item-icon">
+        <ng-container [ngSwitch]="item.label">
+          <!-- Home -->
+          <svg *ngSwitchCase="'Home'" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          <!-- Carreras -->
+          <svg *ngSwitchCase="'Carreras'" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L9 8.5v6h2v-4.5l1.9 8.4z"/>
+          </svg>
+          <!-- Alertas -->
+          <svg *ngSwitchCase="'Alertas'" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+          </svg>
+          <!-- Historial -->
+          <svg *ngSwitchCase="'Historial'" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+          </svg>
+          <!-- Metas -->
+          <svg *ngSwitchCase="'Metas'" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <!-- Retos -->
+          <svg *ngSwitchCase="'Retos'" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+          </svg>
+          <!-- Perfil -->
+          <svg *ngSwitchCase="'Perfil'" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </ng-container>
+      </div>
+      <span class="nav-item-label">{{ item.label }}</span>
+    </button>
+  </div>
+</div>

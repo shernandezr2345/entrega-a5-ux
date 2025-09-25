@@ -1,0 +1,612 @@
+@import "../../tokens.scss";
+
+.crear-alerta-container {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: $font-family-base;
+}
+
+.navigation-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main-content {
+  margin-left: 84px;
+  padding: 32px;
+  width: calc(100% - 84px);
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: $font-size-titulo-principal;
+  font-weight: $font-weight-titulo-principal;
+  font-family: $font-family-base;
+  color: #000000;
+  margin: 0;
+  line-height: $line-height-titulo-principal;
+}
+
+.add-button {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: none;
+  color: #624E88;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(98, 78, 136, 0.4);
+  background: #8967B3;
+}
+
+/* Form Card - Layout correcto con SOLO UN separador */
+.form-card {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #8967B3;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 32px;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.form-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  gap: 0;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+}
+
+/* Columna 1: Datos básicos */
+.datos-basicos {
+  flex: 1;
+  padding: 0 24px 0 0;
+}
+
+/* Container para las columnas de la derecha */
+.form-columns-right {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  height: 100%;
+  flex: 1;
+  padding: 0 0 0 24px;
+}
+
+/* Columna 2: Plantilla y Notificación */
+.plantilla-notificacion {
+  flex: 1;
+}
+
+/* Columna 3: Switches */
+.switches-column {
+  flex: 1;
+  position: relative;
+}
+
+/* Separador vertical - SIMPLE EN EL CENTRO */
+.vertical-full-width_62332-8907 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: content-box;
+  overflow: hidden;
+  width: 1px;
+  height: 320px;
+  flex: 0 0 1px;
+  margin: 0 12px;
+}
+
+.divider_I62332-8907-51816-5863 {
+  display: flex;
+  background: rgba(255, 255, 255, 0.3);
+  width: 1px;
+  height: 100%;
+}
+
+.section-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: $font-family-base;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-number {
+  background: #CB80AB;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Form rows para alinear elementos horizontalmente */
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+
+.form-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item.full-width {
+  width: 100%;
+}
+
+.field-label {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.field-description {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: $font-family-base;
+  margin-top: 6px;
+}
+
+/* Input containers SIN las "B" de comentarios de Figma */
+.input-container {
+  background: white;
+  border: 1px solid #79747E;
+  border-radius: 4px;
+  height: 56px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 210px;
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: $font-family-base;
+  color: #333;
+  flex: 1;
+  width: 100%;
+}
+
+.input-container input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Text Field Plantilla SIN la "B" de comentario de Figma */
+.text-field_62332-8912 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0px;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0px 0px;
+  border-color: #79747E;
+  border-style: solid;
+  border-width: 0px;
+  background: #ffffff;
+  width: 210px;
+  height: 94px;
+}
+
+.text-field_I62332-8912-52798-25506 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border-color: #79747E;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  height: 100%;
+}
+
+.state-layer_I62332-8912-52798-25507 {
+  padding: 4px 16px 4px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 4px;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0px 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.content_I62332-8912-52798-25508 {
+  padding: 4px 0px 4px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 4px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.label-text-container_I62332-8912-52798-25509 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.text-label-text_I62332-8912-52798-25510 {
+  color: #79747E;
+  font-size: $font-size-nav;
+  font-weight: 400;
+  font-family: $font-family-base;
+  text-align: left;
+  text-wrap: wrap;
+  width: 100%;
+}
+
+.textarea-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: $font-family-base;
+  color: #333;
+  flex: 1;
+  resize: none;
+  padding: 0;
+}
+
+.textarea-field::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Segmented buttons con anchos fijos */
+.segmented-button {
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #E0E0E0;
+  background: white;
+  height: 48px;
+  width: 207px;
+}
+
+.segmented-button button {
+  flex: 1;
+  border: none;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.segmented-button button:first-child {
+  border-right: 1px solid #E0E0E0;
+}
+
+.segmented-button button.selected {
+  background: #CB80AB;
+  color: white;
+}
+
+.segmented-button button:hover:not(.selected) {
+  background: #F5F5F5;
+}
+
+/* Segmented button para números - usando código exacto de Figma */
+.x--deprecated--segmented-button_62332-8928 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: -1px;
+  box-sizing: border-box;
+  width: 206px;
+  height: 48px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #E0E0E0;
+  background: white;
+}
+
+.segment-start_I62332-8928-53923-36682,
+.segment-2_I62332-8928-53923-36683,
+.segment-end_I62332-8928-53923-36684 {
+  height: 48px;
+  flex: 1;
+  border: none;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.segment-start_I62332-8928-53923-36682 {
+  border-radius: 24px 0 0 24px;
+  border-right: 1px solid #E0E0E0;
+}
+
+.segment-2_I62332-8928-53923-36683 {
+  border-right: 1px solid #E0E0E0;
+}
+
+.segment-end_I62332-8928-53923-36684 {
+  border-radius: 0 24px 24px 0;
+}
+
+.segment-start_I62332-8928-53923-36682.selected,
+.segment-2_I62332-8928-53923-36683.selected,
+.segment-end_I62332-8928-53923-36684.selected {
+  background: #CB80AB;
+  color: white;
+}
+
+.segment-start_I62332-8928-53923-36682.selected {
+  border-right: 1px solid #CB80AB;
+}
+
+.segment-2_I62332-8928-53923-36683.selected {
+  border-right: 1px solid #CB80AB;
+}
+
+/* Checkbox */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 14px;
+  font-family: $font-family-base;
+  cursor: pointer;
+  margin-top: 16px;
+  height: 56px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  transition: all 0.2s ease;
+  font-size: 12px;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .checkmark {
+  background: #CB80AB;
+  border-color: #CB80AB;
+  color: white;
+}
+
+/* Secciones dentro de plantilla-notificacion */
+.section {
+  margin-bottom: 24px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+/* Switches column */
+.switches-column {
+  position: relative;
+}
+
+.switches-column .form-item {
+  margin-bottom: 16px;
+}
+
+.switches-column .form-item:first-child {
+  margin-top: 46px;
+}
+
+.switch-toggle {
+  width: 154px;
+}
+
+/* Guardar button - SIMPLE Y FUNCIONAL */
+.guardar-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.guardar-btn {
+  background: #CB80AB;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 123px;
+  height: 56px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(203, 128, 171, 0.3);
+}
+
+.guardar-btn:hover {
+  background: #B56B96;
+  transform: translateY(-1px);
+}
+
+/* Cards grid */
+.preview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .form-layout {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .form-columns-right {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .form-column {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .vertical-full-width_62332-8907 {
+    width: 100%;
+    height: 1px;
+    flex-direction: row;
+  }
+  
+  .divider_I62332-8907-51816-5863 {
+    width: 100%;
+    height: 1px;
+  }
+  
+  .form-card {
+    height: auto;
+    min-height: 600px;
+  }
+  
+  .switches-column {
+    align-items: flex-start;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .preview-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 899px) {
+  .preview-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .navigation-rail {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+  
+  .preview-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-layout {
+    flex-direction: column;
+  }
+  
+  .input-container, .text-field_62332-8912, .segmented-button, .x--deprecated--segmented-button_62332-8928 {
+    width: 100%;
+  }
+}

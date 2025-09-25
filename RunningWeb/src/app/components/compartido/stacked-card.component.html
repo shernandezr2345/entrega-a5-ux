@@ -1,0 +1,25 @@
+<div class="stacked-card_62330-11842">
+  <div class="content_I62330-11842-58710-12828">
+    <div class="image-30_I62330-11842-62333-8634">
+      <!-- Simplified image container -->
+      <div class="image-placeholder" 
+           [style.background-image]="imageUrl ? 'url(' + imageUrl + ')' : 'linear-gradient(135deg, #8B5FBF 0%, #6B46C1 100%)'">
+      </div>
+    </div>
+    <div class="text-content_I62330-11842-58710-12838">
+      <div class="headline_I62330-11842-58710-12839">
+        <span class="text-title_I62330-11842-58710-12840">{{ titleText }}</span>
+        <span class="text-subhead_I62330-11842-58710-12841">{{ subtitleText }}</span>
+      </div>
+      <div class="actions_I62330-11842-58710-12843">
+        <button 
+          class="btn-primary"
+          (click)="onViewMore()"
+          type="button"
+        >
+          {{ buttonText }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

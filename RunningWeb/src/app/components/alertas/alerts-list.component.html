@@ -1,0 +1,56 @@
+<div class="base_62330-11746">
+  <!-- Navigation Rail -->
+  <app-navigation-rail
+    [showMenu]="true"
+    [showFab]="true"
+    [alignment]="'Top'"
+    [navItems]="'6'"
+    (navItemSelected)="onNavItemSelected($event)"
+    class="navigation-rail_I62330-11746-62297-12157"
+  ></app-navigation-rail>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="page-title">Listado de alertas</h1>
+      <button class="add-button" type="button" (click)="onCrearAlerta()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid">
+      <app-stacked-card
+        *ngFor="let alert of alerts; trackBy: trackByAlertId"
+        [titleText]="alert.titleText"
+        [subtitleText]="alert.subtitleText"
+        [supportingText]="alert.supportingText"
+        [headerText]="'Header'"
+        [subheadText]="'Subhead'"
+        [showSecondaryAction]="false"
+        [style]="'Elevated'"
+        [layout]="'Media & text'"
+        [buttonText]="'Ver más'"
+        [imageUrl]="alert.imageUrl || ''"
+        (viewMoreClicked)="onCardViewMore(alert.id)"
+        class="card-item"
+      ></app-stacked-card>
+    </div>
+  </div>
+
+  <!-- Background Rectangle -->
+  <div class="rectangle-21_I62330-11746-62297-12064">
+    <svg
+      width="1188"
+      height="764"
+      viewBox="0 0 1188 764"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="1188" height="764" fill="white" />
+    </svg>
+  </div>
+</div>
