@@ -1,0 +1,365 @@
+@import "../../tokens.scss";
+
+.crear-meta-container {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: $font-family-base;
+}
+
+.navigation-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main-content {
+  margin-left: 84px;
+  padding: 32px;
+  width: calc(100% - 84px);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #000000;
+  margin: 0;
+}
+
+.add-button {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: none;
+  color: #624E88;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(98, 78, 136, 0.5);
+  background: #8967B3;
+}
+
+/* Form Layout */
+.form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 80px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: end;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+.form-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+/* Text Field Component - Usando CSS exacto de Figma */
+.text-field_62346-12668 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0px;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0px 0px;
+  border-color: $m-3-light-schemes-on-surface;
+  border-style: solid;
+  border-width: 0px;
+  background: #ffffff;
+  width: 343px;
+  height: 56px;
+}
+
+.text-field_I62346-12668-52798-25506 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border-color: $m-3-light-schemes-on-surface;
+  border-style: solid;
+  border-width: 1px;
+  width: -webkit-fill-available;
+  height: 100%;
+}
+
+.state-layer_I62346-12668-52798-25507 {
+  padding: 4px 0px 4px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 4px;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0px 0px;
+  width: -webkit-fill-available;
+  height: 100%;
+}
+
+.content_I62346-12668-52798-25508 {
+  padding: 4px 0px 4px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0px;
+  box-sizing: border-box;
+  height: 48px;
+  width: -webkit-fill-available;
+}
+
+.label-text-container_I62346-12668-52798-25509 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+  width: -webkit-fill-available;
+}
+
+.text-label-text_I62346-12668-52798-25510 {
+  color: $m-3-light-schemes-on-surface;
+  @include m-3-body-large-text;
+  font-weight: 400;
+  text-align: left;
+  text-wrap: wrap;
+  width: -webkit-fill-available;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+/* Inputs y selects dentro del text field */
+.text-label-text_I62346-12668-52798-25510 input,
+.text-label-text_I62346-12668-52798-25510 select {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: $m-3-light-schemes-on-surface;
+  @include m-3-body-large-text;
+  font-weight: 400;
+}
+
+/* Dropdown arrow para selects */
+select.text-label-text_I62346-12668-52798-25510 {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+
+
+/* Extended FAB Button - CSS exacto de Figma */
+.guardar-group {
+  align-self: end;
+  margin-top: 0;
+  justify-self: start;
+  margin-left: calc(343px - 123px);
+}
+
+.empty-space {
+  height: 32px;
+}
+
+.extended-fab_62348-13280 {
+  background: #CB80AB;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 123px;
+  height: 56px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(203, 128, 171, 0.3);
+}
+
+.state-layer_I62348-13280-57998-43344 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.text-label-text_I62348-13280-57998-43346 {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.extended-fab_62348-13280:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(203, 128, 171, 0.4);
+}
+
+.extended-fab_62348-13280:disabled {
+  background: #CCCCCC;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+/* Background Decorations */
+.background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.circle-decoration {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  right: -150px;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  right: 20%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.circle-3 {
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: -100px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Focus states */
+.text-field_I62346-12668-52798-25506:focus-within {
+  border-color: #624E88;
+  box-shadow: 0 0 0 2px rgba(98, 78, 136, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .form-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .guardar-group {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-rail {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .header {
+    margin-bottom: 32px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+  }
+  
+  .form-layout {
+    gap: 32px;
+  }
+  
+  .left-column,
+  .right-column {
+    gap: 24px;
+  }
+  
+  .text-field_62346-12668 {
+    width: 100%;
+  }
+}

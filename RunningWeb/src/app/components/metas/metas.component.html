@@ -1,0 +1,124 @@
+<div class="metas-container">
+  <!-- Navigation Rail -->
+  <app-navigation-rail
+    [showMenu]="false"
+    [showFab]="false"
+    [alignment]="'Top'"
+    [navItems]="'7'"
+    (navItemSelected)="onNavItemSelected($event)"
+    class="navigation-rail"
+  ></app-navigation-rail>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="page-title">Mis Metas</h1>
+      <button class="add-button" type="button" (click)="onCrearMeta()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Layout principal con 2 columnas -->
+    <div class="metas-layout">
+      <!-- Columna izquierda - Meta Activa y Historial -->
+      <div class="left-column">
+        
+        <!-- Contenedor Meta Activa - Rectangle 16 -->
+        <div class="rectangle-16_62336-23129">
+          <div class="meta-activa-content">
+            <h2 class="meta-activa-title">{{metaActiva.titulo}}</h2>
+            
+            <div class="meta-activa-cards">
+              <!-- Cards container usando estructura de Figma -->
+              <div class="rectangle-20_62336-23139">
+                <!-- Card con imagen -->
+                <div class="rectangle-12_I62336-23139-61984-7374 image-card">
+                  <div class="image-container">
+                    <img [src]="metaActiva.imagen" alt="Meta imagen" class="meta-image">
+                  </div>
+                </div>
+                
+                <!-- Card con kilómetros -->
+                <div class="rectangle-12_I62336-23139-61984-7374 info-card-km">
+                  <span class="meta-value">{{metaActiva.kilometros}}</span>
+                </div>
+                
+                <!-- Card con periodo -->
+                <div class="rectangle-12_I62336-23139-61984-7374 info-card-period">
+                  <div class="meta-period">
+                    <span class="period-number">4</span>
+                    <span class="period-text">Semana</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenedor Historial - Rectangle 17 -->
+        <div class="rectangle-17_62336-23130">
+          <div class="historial-content">
+            <h3 class="historial-title">Historial:</h3>
+            
+            <!-- Tabla HTML real -->
+            <table class="historial-table">
+              <thead>
+                <tr class="table-header">
+                  <th class="header-meta">Meta</th>
+                  <th class="header-avance">Avance</th>
+                  <th class="header-estado">Estado</th>
+                  <th class="header-editar">Editar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-row" *ngFor="let item of historial">
+                  <td class="cell-meta">
+                    <span class="meta-name">{{item.meta}}</span>
+                  </td>
+                  <td class="cell-avance">
+                    <div class="avance-info">
+                      <span class="avance-primary">{{item.avance}}</span>
+                      <span class="avance-secondary">{{item.avanceDetalle}}</span>
+                    </div>
+                  </td>
+                  <td class="cell-estado">
+                    <span class="estado-text">{{item.estado}}</span>
+                  </td>
+                  <td class="cell-editar">
+                    <button class="editar-btn" (click)="onEditarMeta(item.id)">Editar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha - Metas Sugeridas -->
+      <div class="right-column">
+        <!-- Contenedor Metas Sugeridas - Rectangle 18 -->
+        <div class="rectangle-18_62336-23132">
+          <div class="metas-sugeridas-content">
+            <h3 class="metas-sugeridas-title">¡ Metas Sugerida !</h3>
+            
+            <div class="sugeridas-cards">
+              <div 
+                class="sugerida-card" 
+                *ngFor="let meta of metasSugeridas"
+                (click)="onMetaSugeridaClick(meta.id)"
+              >
+                <img [src]="meta.imagen" alt="Meta sugerida" class="sugerida-image">
+                <div class="sugerida-overlay">
+                  <div class="sugerida-icon">⏱</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

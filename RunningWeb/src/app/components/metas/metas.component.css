@@ -1,0 +1,487 @@
+@import "../../tokens.scss";
+
+.metas-container {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: $font-family-base;
+}
+
+.navigation-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main-content {
+  margin-left: 84px;
+  padding: 32px;
+  width: calc(100% - 84px);
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: $font-size-titulo-principal;
+  font-weight: $font-weight-titulo-principal;
+  font-family: $font-family-base;
+  color: #000000;
+  margin: 0;
+  line-height: $line-height-titulo-principal;
+}
+
+.add-button {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: none;
+  color: #624E88;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(98, 78, 136, 0.4);
+  background: #8967B3;
+}
+
+/* Layout principal - APROVECHA TODO EL ESPACIO */
+.metas-layout {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.right-column {
+  flex: 0 0 261px;
+}
+
+/* Rectangle 16 - Meta Activa - OCUPA TODO EL ESPACIO */
+.rectangle-16_62336-23129 {
+  width: 100%;
+  height: 232px;
+  background: #8967B3;
+  border-radius: 15px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-activa-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-activa-title {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: $font-family-base;
+  margin: 0 0 20px 0;
+  color: white;
+  line-height: 25px;
+  letter-spacing: 1%;
+}
+
+.meta-activa-cards {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 118px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Contenedor principal - DISTRIBUIR CON TAMAÑOS FIJOS */
+.rectangle-20_62336-23139 {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+  justify-content: space-between;
+}
+
+/* CARDS CON TAMAÑO FIJO DISTRIBUIDAS */
+.rectangle-12_I62336-23139-61984-7374 {
+  position: relative;
+  display: flex;
+  background: #CB80AB;
+  border-radius: 18px;
+  align-items: center;
+  justify-content: center;
+  width: 237px;
+  height: 118px;
+  flex: 0 0 237px;
+}
+
+/* Card con imagen - TAMAÑO FIJO */
+.rectangle-12_I62336-23139-61984-7374.image-card {
+  width: 237px;
+  height: 118px;
+  padding: 0;
+  overflow: hidden;
+  background: #CB80AB;
+  flex: 0 0 237px;
+}
+
+.image-container {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: white;
+  margin: auto;
+}
+
+.rectangle-12_I62336-23139-61984-7374.info-card-km {
+  width: 237px;
+  height: 118px;
+  flex-direction: column;
+  flex: 0 0 237px;
+}
+
+.rectangle-12_I62336-23139-61984-7374.info-card-period {
+  width: 237px;
+  height: 118px;
+  flex-direction: column;
+  flex: 0 0 237px;
+}
+
+.meta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TIPOGRAFÍA IDÉNTICA - MISMO TAMAÑO EXACTO */
+.meta-value {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-family: $font-family-base;
+  line-height: 1;
+}
+
+.meta-period {
+  text-align: center;
+  color: white;
+}
+
+/* TIPOGRAFÍA CONSISTENTE - MISMO TAMAÑO PARA AMBOS NÚMEROS */
+.period-number {
+  font-size: 48px;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+  font-family: $font-family-base;
+  margin-bottom: 8px;
+}
+
+.period-text {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: $font-family-base;
+}
+
+/* Rectangle 17 - Historial - OCUPA TODO EL ESPACIO */
+.rectangle-17_62336-23130 {
+  width: 100%;
+  height: 262px;
+  background: #8967B3;
+  border-radius: 15px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.historial-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.historial-title {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: $font-family-base;
+  margin: 0 0 16px 0;
+  color: white;
+  line-height: 25px;
+  letter-spacing: 1%;
+}
+
+/* Tabla HTML real */
+.historial-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.table-header {
+  background: #CB80AB;
+  height: 56px;
+}
+
+.table-header th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+
+.header-meta {
+  width: 30%;
+}
+
+.header-avance {
+  width: 35%;
+}
+
+.header-estado {
+  width: 20%;
+}
+
+.header-editar {
+  width: 15%;
+}
+
+.table-row {
+  background: white;
+  height: 56px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row td {
+  padding: 16px;
+  vertical-align: middle;
+  border: none;
+}
+
+.meta-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.avance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.avance-primary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.avance-secondary {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666;
+}
+
+.estado-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.editar-btn {
+  padding: 2px 8px 2px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #e6d9a2;
+  height: 24px;
+  font-weight: 500;
+  text-align: left;
+  text-wrap: nowrap;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editar-btn:hover {
+  background: #d4c488;
+}
+
+/* Rectangle 18 - Metas Sugeridas */
+.rectangle-18_62336-23132 {
+  width: 261px;
+  height: 505px;
+  background: #8967B3;
+  border-radius: 15px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.metas-sugeridas-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.metas-sugeridas-title {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: $font-family-base;
+  margin: 0 0 24px 0;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  letter-spacing: 1%;
+}
+
+.sugeridas-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sugerida-card {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sugerida-card:hover {
+  transform: translateY(-2px);
+}
+
+.sugerida-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sugerida-overlay {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sugerida-icon {
+  color: white;
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .metas-layout {
+    flex-direction: column;
+  }
+  
+  .right-column {
+    flex: none;
+  }
+  
+  .rectangle-18_62336-23132 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .sugeridas-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .sugerida-card {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 599px) {
+  .navigation-rail {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+  
+  .meta-activa-cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .meta-card {
+    width: 100%;
+  }
+  
+  .historial-table {
+    font-size: 12px;
+  }
+  
+  .table-header th,
+  .table-row td {
+    padding: 8px;
+  }
+}

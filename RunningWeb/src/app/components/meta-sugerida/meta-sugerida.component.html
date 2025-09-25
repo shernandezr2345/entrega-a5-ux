@@ -1,0 +1,92 @@
+<div class="meta-sugerida-container">
+  <app-navigation-rail
+    [showMenu]="false"
+    [showFab]="false"
+    [alignment]="'Top'"
+    [navItems]="'7'"
+    (navItemSelected)="onNavItemSelected($event)"
+    class="navigation-rail"
+  ></app-navigation-rail>
+
+  <div class="main-content">
+    <div class="header">
+      <h1 class="page-title">{{metaData.titulo}}</h1>
+      <button class="add-button" type="button" aria-label="Agregar">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="meta-info-section">
+      <div class="meta-info-item">
+        <div class="meta-icon objetivo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="meta-info-value">{{metaData.objetivo}}</div>
+        <div class="badge-b">B</div>
+      </div>
+
+      <div class="meta-info-item">
+        <div class="meta-icon periodo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <div class="meta-info-value">{{metaData.periodo}}</div>
+      </div>
+
+      <div class="meta-info-item">
+        <div class="meta-icon tipo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="meta-info-value">{{metaData.tipo}}</div>
+      </div>
+
+      <div class="meta-info-item">
+        <div class="meta-icon alarma-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+        </div>
+        <div class="meta-info-value">{{metaData.alarma}}</div>
+      </div>
+    </div>
+
+    <form [formGroup]="metaForm" (ngSubmit)="onAceptarMeta()" class="cards-section">
+      <div class="meta-card">
+        <div class="rectangle-22_62348-13286" style="width: 252px; height: 133px; background: #CB80AB; border-radius: 18px;">
+          <div class="card-content">
+            <span class="card-label">Objetivo</span>
+          </div>
+        </div>
+      </div>
+      <div class="meta-card">
+        <div class="rectangle-22_62348-13286" style="width: 252px; height: 133px; background: #CB80AB; border-radius: 18px;">
+          <div class="card-content">
+            <span class="card-label">Período</span>
+          </div>
+        </div>
+      </div>
+      <div class="meta-card">
+        <div class="rectangle-22_62348-13286" style="width: 252px; height: 133px; background: #CB80AB; border-radius: 18px;">
+          <div class="card-content">
+            <span class="card-label">Tipo</span>
+          </div>
+        </div>
+      </div>
+      <div class="meta-card">
+        <div class="rectangle-22_62348-13286" style="width: 252px; height: 133px; background: #CB80AB; border-radius: 18px;">
+          <div class="card-content">
+            <span class="card-label">Alarma</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="aceptar-button-container">
+        <button type="submit" class="extended-fab_62348-13280" [disabled]="!metaForm.valid">
+          <div class="state-layer_I62348-13280-57998-43344">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="check-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span class="text-label-text_I62348-13280-57998-43346">Aceptar Meta</span>
+          </div>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,171 @@
+<div class="crear-meta-container">
+  <!-- Navigation Rail -->
+  <app-navigation-rail
+    [showMenu]="false"
+    [showFab]="false"
+    [alignment]="'Top'"
+    [navItems]="'7'"
+    (navItemSelected)="onNavItemSelected($event)"
+    class="navigation-rail"
+  ></app-navigation-rail>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="page-title">Crear Meta</h1>
+      <button class="add-button" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Form Layout - Grid para alinear filas -->
+    <form [formGroup]="metaForm" (ngSubmit)="onGuardar()" class="form-layout">
+      
+      <!-- Fila 1: Meta y Alarma vinculada -->
+      <div class="form-group">
+        <label class="form-label">Meta</label>
+        <div class="text-field_62346-12668">
+          <div class="text-field_I62346-12668-52798-25506">
+            <div class="state-layer_I62346-12668-52798-25507">
+              <div class="content_I62346-12668-52798-25508">
+                <div class="label-text-container_I62346-12668-52798-25509">
+                  <input 
+                    type="text" 
+                    class="text-label-text_I62346-12668-52798-25510"
+                    formControlName="meta"
+                    placeholder="Mi meta personal semanal">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Alarma vinculada:</label>
+        <div class="text-field_62346-12668">
+          <div class="text-field_I62346-12668-52798-25506">
+            <div class="state-layer_I62346-12668-52798-25507">
+              <div class="content_I62346-12668-52798-25508">
+                <div class="label-text-container_I62346-12668-52798-25509">
+                  <select class="text-label-text_I62346-12668-52798-25510" formControlName="alarmaVinculada">
+                    <option value="cancion1">Mi Canción favorita</option>
+                    <option value="cancion2">Energetic Beat</option>
+                    <option value="cancion3">Morning Motivation</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila 2: Tipo y Condición del disparo -->
+      <div class="form-group">
+        <label class="form-label">Tipo:</label>
+        <div class="text-field_62346-12668">
+          <div class="text-field_I62346-12668-52798-25506">
+            <div class="state-layer_I62346-12668-52798-25507">
+              <div class="content_I62346-12668-52798-25508">
+                <div class="label-text-container_I62346-12668-52798-25509">
+                  <select class="text-label-text_I62346-12668-52798-25510" formControlName="tipo">
+                    <option value="distancia">Distancia</option>
+                    <option value="tiempo">Tiempo</option>
+                    <option value="calorias">Calorías</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Condición del disparo:</label>
+        <div class="text-field_62346-12668">
+          <div class="text-field_I62346-12668-52798-25506">
+            <div class="state-layer_I62346-12668-52798-25507">
+              <div class="content_I62346-12668-52798-25508">
+                <div class="label-text-container_I62346-12668-52798-25509">
+                  <select class="text-label-text_I62346-12668-52798-25510" formControlName="condicionDisparo">
+                    <option value="1km">Cada 1 Km</option>
+                    <option value="5km">Cada 5 Km</option>
+                    <option value="10km">Cada 10 Km</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila 3: Objetivo y espacio vacío -->
+      <div class="form-group">
+        <label class="form-label">Objetivo:</label>
+        <div class="text-field_62346-12668">
+          <div class="text-field_I62346-12668-52798-25506">
+            <div class="state-layer_I62346-12668-52798-25507">
+              <div class="content_I62346-12668-52798-25508">
+                <div class="label-text-container_I62346-12668-52798-25509">
+                  <select class="text-label-text_I62346-12668-52798-25510" formControlName="objetivo">
+                    <option value="5km">5 Km</option>
+                    <option value="10km">10 Km</option>
+                    <option value="20km">20 Km</option>
+                    <option value="42km">42 Km</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group empty-space"></div>
+
+      <!-- Fila 4: Duración y Botón Guardar -->
+      <div class="form-group">
+        <label class="form-label">Duración:</label>
+        <div class="text-field_62346-12668">
+          <div class="text-field_I62346-12668-52798-25506">
+            <div class="state-layer_I62346-12668-52798-25507">
+              <div class="content_I62346-12668-52798-25508">
+                <div class="label-text-container_I62346-12668-52798-25509">
+                  <select class="text-label-text_I62346-12668-52798-25510" formControlName="duracion">
+                    <option value="diario">Diario</option>
+                    <option value="semanal">Semanal</option>
+                    <option value="mensual">Mensual</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group guardar-group">
+        <button 
+          type="submit" 
+          class="extended-fab_62348-13280"
+          [disabled]="!metaForm.valid">
+          <div class="state-layer_I62348-13280-57998-43344">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="check-icon">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <span class="text-label-text_I62348-13280-57998-43346">Guardar</span>
+          </div>
+        </button>
+      </div>
+
+    </form>
+
+    <!-- Decorative Background Elements -->
+    <div class="background-decoration">
+      <div class="circle-decoration circle-1"></div>
+      <div class="circle-decoration circle-2"></div>
+      <div class="circle-decoration circle-3"></div>
+    </div>
+  </div>
+</div>
